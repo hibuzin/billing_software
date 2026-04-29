@@ -1,6 +1,6 @@
 .appbar {
   height: 64px; 
-  background: #FFFFFF;
+  background: #f7f0dc;
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -36,7 +36,7 @@
   transform: translateY(-50%);
   height: 24px;                 
   width: 3px;
-  background: #042c5f;           
+  background: #585f04;           
 }
 
 .right {
@@ -58,7 +58,7 @@
 
 .search:focus {
   background: #FFFFFF;
-  border-color: #405c53;
+  border-color: #406b5d;
   box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
 }
 
@@ -85,7 +85,7 @@
 
 .icon {
   font-size: 20px;
-  color: #64748B; 
+  color: #867b07; 
   cursor: pointer;
   transition: 0.3s ease;
 }

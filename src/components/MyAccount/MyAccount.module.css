@@ -21,7 +21,7 @@
   flex-direction: column;
   align-items: center;
 
-  position: relative; /* 👈 important */
+  position: relative; 
 
   transform: translateX(100%);
   animation: slideIn 0.3s forwards ease;
@@ -33,34 +33,55 @@
   height: 100px; /* increase for better spacing */
 }
 
-/* avatar top-left */
+/* row layout */
+.userRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+}
+
+/* remove absolute positioning */
 .avatar {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: #059669;
+  background: #4f452b;
   color: white;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-size: 22px;
+  font-size: 20px;
+}
 
-  position: absolute;
-  top: 10px;
-  left: 15px;
+/* text side */
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.email {
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
 }
 
 
 .thickDivider {
   width: 100%;
-  height: 4px;   /* thickness */
-  background: #e5e7eb; /* light gray */
+  height: 4px;   
+  background: #e5e7eb; 
   margin-bottom: 20px;
 }
 
-/* container for 2 squares */
+
 .cardContainer {
   width: 100%;
   display: flex;
@@ -72,8 +93,8 @@
 /* square cards */
 .card {
   flex: 1;
-  aspect-ratio: 1 / 1; /* 👈 perfect square */
-  background: #f3f4f6;
+  aspect-ratio: 1 / 1; 
+  background: #f7f0dc;
   border-radius: 10px;
 
   display: flex;
@@ -88,7 +109,7 @@
 
 /* hover effect */
 .card:hover {
-  background: #e5e7eb;
+  background: #d2c886;
 }
 
 @keyframes slideIn {
@@ -120,6 +141,6 @@
 }
 
 .logoutBtn {
-  background: #ef4444;
+  background: #4f452b;
   color: white;
 }

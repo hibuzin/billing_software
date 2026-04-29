@@ -12,14 +12,15 @@ import Analytics from "./pages/Analytics";
 import Offers from "./pages/Offers";
 import Home from "./pages/Home";
 import CreateUser from "./components/MyAccount/CreateUser";
+import Cashier from "./components/Cashier";
 import MyAccount from "./components/MyAccount/MyAccount";
+import Toast from "./components/Toast";
 
 function MainLayout() {
   return (
     <>
       <AppBar />
       <Sidebar />
-
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Customers />} />
@@ -34,7 +35,9 @@ function MainLayout() {
           <Route path="/offers" element={<Offers />} />
           <Route path="/myaccount" element={<MyAccount />} />
           <Route path="/create-user" element={<CreateUser />} />
+          <Route path="/cashier" element={<Cashier />} />
         </Routes>
+        
       </div>
     </>
   );
@@ -51,7 +54,11 @@ function AppRoutes() {
     return <CreateUser />;
   }
 
-  return <MainLayout />;
+  if (location.pathname === "/cashier") {
+    return <Cashier />;
+  }
+
+  return <MainLayout />; 
 }
 
 function App() {
